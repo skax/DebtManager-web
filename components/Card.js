@@ -20,13 +20,15 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.26,
         elevation: 10,
         backgroundColor: 'white',
-        borderRadius: 10 
+        borderRadius: 10,
+        margin: 10 
     },
     cardTitle: {
         textAlign: 'center',
         fontSize: 20,
-        marginBottom: 10
+        fontWeight: 'bold',
+        marginBottom: 15
     }
 });
 
-export default Card;
+export default Card; 
