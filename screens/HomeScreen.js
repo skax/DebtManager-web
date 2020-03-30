@@ -7,7 +7,7 @@ import ShortLoanDataItem from '../components/ShortLoanDataItem';
 
 import { USER_DATA } from '../data/user-data';
 
-const HomeScreen = props => {
+const HomeScreen = ({navigation}) => {
     return (
         <ScrollView>
             <View style={styles.screen}>
@@ -25,7 +25,7 @@ const HomeScreen = props => {
 
                 <CardLoanShortList
                     title="Największe kwoty do oddania"
-                    onSectionPress={() => console.log("Sekcja 1")}
+                    onSectionPress={() => navigation.navigate('DebtToGiveList')}
                     list={USER_DATA.peopleToGiveMoneyList}
                 />
 

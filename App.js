@@ -4,6 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
+import DebtToGiveListScreen from './screens/DebtToGiveListScreen';
+import ScreenTransition from './navigation/ScreenTransition';
+
 import Colors from './constants/colors';
 
 export default function App() {
@@ -27,14 +30,22 @@ export default function App() {
         name="Login" 
         component={LoginScreen} 
         options= {{
-          headerShown: false
+          headerShown: false,
         }}
         />
         <Stack.Screen
           name="Home"
           component={HomeScreen}
           options={{
-            title: "Debt Manager"
+            title: "Debt Manager",
+          ...ScreenTransition
+          }} />
+          <Stack.Screen
+          name="DebtToGiveList"
+          component={DebtToGiveListScreen}
+          options={{
+            title: "List",
+            ...ScreenTransition
           }} />
       </Stack.Navigator>
     </NavigationContainer>

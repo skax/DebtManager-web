@@ -2,9 +2,16 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const Card = props => {
+
+    let title = null
+
+    if (props.title) {
+        title = <Text style={styles.cardTitle}>{props.title}</Text>;
+    }
+
     return (
         <View style={styles.card}>
-            <Text style={styles.cardTitle}>{props.title}</Text>
+            {title}
             {props.children}
         </View>
     );
